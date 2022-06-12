@@ -16,9 +16,9 @@ funktioner_tabel <- funktioner_data |>
               Funktion = colDef(maxWidth = 140)
             ),
             style = list(fontFamily = "Work Sans, sans-serif", fontSize = "14px"),
-            defaultPageSize = 50) 
+            showPageInfo = FALSE,
+            defaultPageSize = 35) 
 
 funktioner_tabel |> 
   save_reactable_test("funktioner_tabel.html")
-
 
