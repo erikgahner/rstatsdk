@@ -1,4 +1,3 @@
-# # rstatsdk, inspiration 
 
 library("tidyverse")
 library("reactable")
@@ -21,4 +20,3 @@ funktioner_tabel <- funktioner_data |>
 
 funktioner_tabel |> 
   save_reactable_test("funktioner_tabel.html")
-
