@@ -1,11 +1,13 @@
-
+# Load pakker
 library("tidyverse")
 library("reactable")
 library("reactablefmtr")
 library("readxl")
 
+# Indlæs data
 funktioner_data <- read_xlsx("funktioner.xlsx")
 
+# Lav tabel
 funktioner_tabel <- funktioner_data |> 
   arrange(Pakke) |> 
   reactable(filterable = TRUE,
@@ -18,5 +20,6 @@ funktioner_tabel <- funktioner_data |>
             showPageInfo = FALSE,
             defaultPageSize = 35) 
 
+# Gem tabel som HTML-fil
 funktioner_tabel |> 
   save_reactable_test("funktioner_tabel.html")
